@@ -1,0 +1,425 @@
+body
+{
+    margin: 0px;
+    font-family: Georgia, serif;
+
+}
+
+a
+{
+    text-decoration: none;
+
+}
+
+ul
+{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    
+}
+
+img
+{
+    max-width: 100%;
+    display: block;
+    border-radius: 5px;
+
+}
+
+.estrutura
+{
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+    grid-template-areas:
+        "header header header"
+        "sidenav conteudo anuncios"
+        "footer footer footer";
+
+}
+
+.cabecalho
+{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 30px;
+    align-items: center;
+    gap: 30px;
+    background-image: linear-gradient(135deg, #8844ee, #b07dfb);
+
+}
+
+.logo
+{
+    max-width: 200px;
+
+}
+
+.menu
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.menu a
+{
+    padding: 10px;
+    font-size: 1.125rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: 0.1s;
+
+}
+
+.menu a:hover
+{
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.sidenav
+{
+    grid-area: sidenav;
+    padding: 30px;
+    background: #fafbfc;
+
+}
+
+.animais
+{
+    display: grid;
+    gap: 30px;
+
+}
+
+.animais li a
+{
+    display: block;
+    min-width: 60px;
+    max-width: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    border-radius: 5px;
+    transition: 0.1s;
+
+}
+
+.animais li a:hover
+{
+    background: #b07dfb;
+
+}
+
+.conteudo
+{
+    grid-area: conteudo;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    margin: 0px auto;
+    gap: 30px;
+
+}
+
+.conteudo .titulo h1
+{
+    margin: 0px;
+    font-size: 3.75rem;
+    font-weight: bold;
+    color: #b07dfb;
+
+}
+
+.conteudo .titulo span
+{
+    font-size: 0.875rem;
+    font-style: italic;
+    color: #b07dfb;
+
+}
+
+.conteudo .caracteristicas
+{
+    display: flex;
+    align-items: start;
+    gap: 30px;
+
+}
+
+.conteudo .peso, .conteudo .idade
+{
+    width: 80px;
+    text-align: center;
+    background-image: linear-gradient(135deg, #8844ee, #b07dfb);
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    border-radius: 5px;
+    position: relative;
+
+}
+
+.conteudo .numero
+{
+    margin: 10px auto;
+    font-size: 3rem;
+    color: #b07dfb;
+
+}
+
+.conteudo .medida
+{
+    display: block;
+    padding: 5px 0px;
+    color: #b07dfb;
+    background: #ffffff;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    top: 4px;
+
+}
+
+.conteudo p
+{
+    margin: 0px;
+    font-size: 1.25rem;
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+.conteudo .ponta-a-ponta
+{
+    grid-column: 1/-1;
+
+}
+
+.conteudo .imagem-1
+{
+    grid-row: span 2;
+    align-self: end;
+
+}
+
+.conteudo .imagem-2
+{
+    align-self: end;
+
+}
+
+.conteudo .destaque
+{
+    max-width: 250px;
+    font-size: 0.875rem;
+    color: #b07dfb;
+
+}
+
+.conteudo .citacao
+{
+    grid-column: 1/-1;
+    padding: 30px;
+    background-image: linear-gradient(135deg, #8844ee, #b07dfb);
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    border-radius: 5px;
+
+}
+
+.conteudo .citacao p
+{
+    max-width: 500px;
+    margin: 0px auto;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.conteudo .atributos
+{
+    padding: 30px;
+    background-image: linear-gradient(135deg, #8844ee, #b07dfb);
+    box-shadow: 5px 5px 15px rgba(44, 44, 44, 0.15);
+    border-radius: 5px;
+
+}
+
+.conteudo .atributos li
+{
+    padding: 15px;
+    font-family: Courier, monospace;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.conteudo .atributos li + li
+{
+    border-top: solid 2px #b07dfb;
+
+}
+
+.informacoes
+{
+    display: grid;
+    gap: 30px;
+
+}
+
+.conteudo .imagem-3
+{
+    grid-column: 1/-1;
+
+}
+
+.anuncios
+{
+    grid-area: anuncios;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    background: #fafbfc;
+
+}
+
+.anuncios-itens
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+
+}
+
+.anuncios-itens img
+{
+    cursor: pointer;
+
+}
+
+.rodape
+{
+    grid-area: footer;
+    padding: 30px;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+
+}
+
+.rodape p
+{
+    margin: 0px;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+@media(max-width: 1200px)
+{
+    .estrutura
+    {
+        grid-template-areas:
+            "header header header"
+            "sidenav conteudo conteudo"
+            "sidenav anuncios anuncios"
+            "footer footer footer";
+
+    }
+
+}
+
+@media(max-width: 750px)
+{
+    .estrutura
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "sidenav"
+            "conteudo"
+            "anuncios"
+            "footer";
+
+    }
+
+    .cabecalho
+    {
+        grid-template-columns: 1fr;
+        
+    }
+
+    .menu
+    {
+        gap: 12px;
+
+    }
+
+    .menu a
+    {
+        font-size: 1rem;
+
+    }
+
+    .sidenav
+    {
+        overflow: scroll;
+        position: relative;
+
+    }
+
+    .sidenav::after
+    {
+        content: "→";
+        color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        animation: seta 0.5s ease-in infinite alternate;
+
+    }
+
+    .animais
+    {
+        display: flex;
+
+    }
+
+    .animais li:last-child
+    {
+        padding-right: 30px;
+
+    }
+
+}
+
+@media(max-width: 600px)
+{
+    .conteudo
+    {
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@keyframes seta
+{
+    from
+    {
+        right: 30px;
+
+    }
+
+    to
+    {
+        right: 20px;
+
+    }
+
+}
